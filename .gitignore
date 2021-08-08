@@ -1,0 +1,4 @@
+.docker-build-ami.conf
+docker-build-ami.log
+easy-rsa
+.env
