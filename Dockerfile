@@ -1,6 +1,13 @@
-FROM node:12
+FROM ubuntu:20.04
+ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt update -y && apt install jq -y
+RUN apt-get update -y && apt-get install curl unzip git jq -y
+
+# install node and yarn
+RUN apt-get -y install curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
+RUN apt-get -y install nodejs
+RUN npm install -g yarn
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && ./aws/install
