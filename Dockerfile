@@ -12,7 +12,7 @@ RUN npm install -g yarn
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && ./aws/install
 
-RUN git clone https://github.com/mmuller88/cdk-prowler.git
+RUN git clone https://github.com/mmuller88/cdk-prowler.git /cdk-prowler
 RUN cd cdk-prowler && yarn add projen && npx projen
 
 # RUN mkdir -p /etc/init.d
