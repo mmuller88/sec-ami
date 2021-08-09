@@ -1,17 +1,57 @@
-#!/bin/bash
-cd /root/cdk-prowler
-ACCOUNT_ID=$(aws sts get-caller-identity | jq '.Account' -r)
-if [ -z "$AWS_REGION" ]
-then
-  EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`
-  EC2_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed 's/[a-z]$//'`"
-  AWS_REGION=${EC2_REGION:-$AWS_REGION}
-fi
-echo "ACCOUNT_ID=$ACCOUNT_ID"
-echo "AWS_REGION=$AWS_REGION"
+#!/bin/sh
+#
+# commands
+#
+# chkconfig: 3 11 01
+# Description: This script is responsible for copying logs S3
+#                   as a daemon
+#
+### BEGIN INIT INFO
+# Provides:          commands
+# Required-Start:    network
+# Required-Stop:     network
+# Default-Start:     3
+# Default-Stop:
+# Description:       This script is responsible for copying logs S3
+#                    as a daemon.
+### END INIT INFO
 
-node_modules/.bin/cdk bootstrap --force --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess aws://$ACCOUNT_ID/$AWS_REGION
-yarn deploy --require-approval never -c reRunProwler=true
+LOGFILE=/var/log/cdk.log
+
+. /lib/lsb/init-functions
+
+start() {
+  echo "was running" > $LOGFILE
+
+  cd /root/cdk-prowler
+  ACCOUNT_ID=$(aws sts get-caller-identity | jq '.Account' -r)
+  if [ -z "$AWS_REGION" ]
+  then
+    EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`
+    EC2_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed 's/[a-z]$//'`"
+    AWS_REGION=${EC2_REGION:-$AWS_REGION}
+  fi
+  echo "ACCOUNT_ID=$ACCOUNT_ID"
+  echo "AWS_REGION=$AWS_REGION"
+
+  node_modules/.bin/cdk bootstrap --force --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess aws://$ACCOUNT_ID/$AWS_REGION
+  yarn deploy --require-approval never -c reRunProwler=true
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    ;;
+  uninstall)
+    ;;
+  restart)
+    start
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart|uninstall}"
+esac
 
 # rm -rf /cdk-prowler
 # rm -rf /etc/init.d/commands.sh

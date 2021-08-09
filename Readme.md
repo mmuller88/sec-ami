@@ -86,3 +86,5 @@ aws cloudformation deploy --template-file https://raw.githubusercontent.com/toni
 ls /usr/local/samba/bin/
 
 ls -l /var/log/samba  
+
+https://www.baeldung.com/linux/run-script-on-startup

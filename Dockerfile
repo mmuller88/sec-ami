@@ -20,4 +20,5 @@ RUN cd cdk-prowler && yarn add projen && npx projen
 # RUN mkdir -p /etc/init.d
 COPY commands.sh /etc/init.d/commands
 RUN chmod +x /etc/init.d/commands
-ENTRYPOINT ["/etc/init.d/commands"]
+RUN update-rc.d commands defaults
+ENTRYPOINT ["/etc/init.d/commands", "start"]
