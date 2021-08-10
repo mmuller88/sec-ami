@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  prowler:
+    build: .
+    container_name: prowler
+    env_file: .env
+    environment:
+      - AWS_REGION=us-east-1
+      - ACCOUNT_ID=981237193288
