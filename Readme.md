@@ -1,5 +1,5 @@
-# courses
-...
+# sec-ami
+Repo for converting a Dockerfile to an AMI.
 
 # Docker Related
 For orchestrating those containers we are use **Docker Compose**. How to install Docker and Docker Compose you can see in the Useful Resources section above.
@@ -76,8 +76,6 @@ Notice! Make sure that you configure internet connection with the VPN Client.
 
 Check the docker-build-ami.log after the script completed successfully.
 
-## VPC
-
 # Prowler
 
 aws cloudformation deploy --template-file https://raw.githubusercontent.com/toniblyx/prowler/master/util/codebuild/codebuild-prowler-audit-account-cfn.yaml --stack-name sec-stack
@@ -88,3 +86,7 @@ ls /usr/local/samba/bin/
 ls -l /var/log/samba  
 
 https://www.baeldung.com/linux/run-script-on-startup
+
+publishing AMI:
+
+https://docs.aws.amazon.com/marketplace/latest/userguide/ami-single-ami-products.html

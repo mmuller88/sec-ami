@@ -3,8 +3,7 @@
 # commands
 #
 # chkconfig: 3 11 01
-# Description: This script is responsible for copying logs S3
-#                   as a daemon
+# Description: Script for starting cdk stacks
 #
 ### BEGIN INIT INFO
 # Provides:          commands
@@ -12,8 +11,7 @@
 # Required-Stop:     network
 # Default-Start:     3
 # Default-Stop:
-# Description:       This script is responsible for copying logs S3
-#                    as a daemon.
+# Description:       Script for starting cdk stacks
 ### END INIT INFO
 
 LOGFILE=/var/log/cdk.log
