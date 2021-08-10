@@ -15,3 +15,16 @@ When the stack creation finishes a Codebuild project runs the Prowler security c
 Notice! For running prowler again you need to deploy the Ec2 instance again!
 
 As for transparency I decided to make the code for creating the AMI public available. Go to https://github.com/mmuller88/sec-ami . There you see the Dockerfile which I used for baking the AMI.
+
+SKU: Prowler-Security-Hardening-Scan-v1.0.0
+Software by: martinmueller.dev
+Title: Prowler Security Hardening Scan v1.0.0
+Product Logo URL: 
+Search Keywords: Prowler,Security,Hardening,Scan
+Resource Name 1: cdk-prowler Github
+Resource URL 1: https://github.com/mmuller88/cdk-prowler
+Resource Name 2: prowler Github
+Resource URL 2: https://github.com/toniblyx/prowler
+Refund Policy: no refunds
+
+Version: 1.0.0

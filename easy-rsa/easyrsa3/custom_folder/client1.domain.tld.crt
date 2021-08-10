@@ -1,0 +1,84 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            c3:cb:e5:1e:26:07:5b:26:fc:be:1f:be:3e:bb:61:c4
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=hacklab
+        Validity
+            Not Before: Jul 16 08:15:51 2021 GMT
+            Not After : Oct 19 08:15:51 2023 GMT
+        Subject: CN=client1.domain.tld
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:ad:33:4f:a8:aa:44:f9:67:26:0b:ed:c4:be:68:
+                    59:61:31:d9:7b:98:c1:b8:19:f2:ec:34:35:2c:ea:
+                    a0:36:26:45:b0:68:30:03:aa:11:3f:c7:77:7a:71:
+                    14:3f:9d:68:d2:74:de:fd:34:9c:ff:84:e1:e9:05:
+                    0d:7b:37:30:f0:72:b8:68:3a:b5:09:de:dd:35:12:
+                    72:12:a5:af:8c:9b:63:7e:e2:da:45:88:a4:0d:2f:
+                    a0:54:65:08:74:cd:85:97:aa:f1:63:cc:b4:ea:37:
+                    25:cc:f3:37:75:18:e8:48:5b:a4:3b:0d:40:c4:5d:
+                    3a:b6:87:cd:22:09:83:41:1a:f6:e8:53:c0:59:1f:
+                    b4:f5:3d:1d:94:ce:d6:94:c4:e3:df:84:e7:f4:94:
+                    29:57:d1:05:ff:12:b8:1c:e3:58:ba:01:fa:4c:60:
+                    ef:3d:ca:62:c5:e7:ad:14:11:fa:19:b0:5e:cf:9c:
+                    f2:0c:8a:c5:a9:6d:69:a1:ee:a8:81:95:33:92:92:
+                    5f:dc:83:ad:d3:d5:c4:c5:51:58:2a:50:ab:e3:2b:
+                    48:53:61:8d:56:33:26:d2:ab:7a:67:c3:06:41:07:
+                    18:df:28:4b:71:09:17:ff:9b:2e:84:2d:69:29:55:
+                    04:47:2d:0c:3d:79:d8:11:dd:45:0a:37:c9:2e:8e:
+                    5f:4b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                C0:89:98:C5:F6:38:18:AF:63:86:5E:D7:CA:E6:67:52:6D:DB:6A:38
+            X509v3 Authority Key Identifier: 
+                keyid:99:11:11:81:D8:48:83:63:5C:1B:7A:15:36:6B:A0:2B:CB:51:0C:B7
+                DirName:/CN=hacklab
+                serial:0D:7E:8F:29:15:1A:1C:95:87:B3:CE:81:3A:91:1C:DE:C7:87:FB:DC
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha256WithRSAEncryption
+         a7:79:c6:f5:4f:00:8b:15:ac:1e:e8:ec:1d:6b:8b:63:e1:15:
+         7e:b9:46:a9:de:07:e4:3b:49:4e:68:e4:bb:83:20:29:fe:5f:
+         a6:11:60:a2:3c:2b:19:cb:b3:ec:0d:b3:1b:08:58:1d:32:88:
+         2d:6a:28:df:b5:83:0f:21:d0:fa:de:e2:02:db:be:02:d6:de:
+         df:13:a0:1f:5d:35:cb:43:7e:da:18:63:51:8c:c8:8a:fb:ba:
+         06:9a:1e:d2:16:02:e0:b2:96:85:47:47:9c:d4:a8:e8:68:6e:
+         00:da:af:dc:aa:80:98:fb:4f:aa:88:15:3e:17:f4:ff:34:d5:
+         d9:05:87:41:5e:15:ac:70:cb:39:e8:cb:84:64:5f:4d:cf:7c:
+         83:ba:15:5c:a9:bd:87:dd:51:48:27:d0:b2:d8:dc:50:a7:45:
+         ad:4c:f0:6c:19:59:a7:43:d2:e9:92:d6:42:ed:1b:2f:fc:5c:
+         e7:7c:fe:6f:0f:c8:d6:a7:c9:cb:a9:b2:67:95:93:94:b1:bf:
+         ac:6d:83:93:91:d8:b5:af:13:49:d1:b0:3c:89:5e:c3:9a:fd:
+         7a:30:52:d3:54:e0:cb:da:e2:7d:57:14:bc:ff:8b:41:02:a5:
+         f9:29:82:6d:99:6e:7c:b1:41:0f:93:67:d8:33:1a:14:19:fb:
+         e8:2c:a5:17
+-----BEGIN CERTIFICATE-----
+MIIDWTCCAkGgAwIBAgIRAMPL5R4mB1sm/L4fvj67YcQwDQYJKoZIhvcNAQELBQAw
+EjEQMA4GA1UEAwwHaGFja2xhYjAeFw0yMTA3MTYwODE1NTFaFw0yMzEwMTkwODE1
+NTFaMB0xGzAZBgNVBAMMEmNsaWVudDEuZG9tYWluLnRsZDCCASIwDQYJKoZIhvcN
+AQEBBQADggEPADCCAQoCggEBAK0zT6iqRPlnJgvtxL5oWWEx2XuYwbgZ8uw0NSzq
+oDYmRbBoMAOqET/Hd3pxFD+daNJ03v00nP+E4ekFDXs3MPByuGg6tQne3TUSchKl
+r4ybY37i2kWIpA0voFRlCHTNhZeq8WPMtOo3JczzN3UY6EhbpDsNQMRdOraHzSIJ
+g0Ea9uhTwFkftPU9HZTO1pTE49+E5/SUKVfRBf8SuBzjWLoB+kxg7z3KYsXnrRQR
++hmwXs+c8gyKxaltaaHuqIGVM5KSX9yDrdPVxMVRWCpQq+MrSFNhjVYzJtKremfD
+BkEHGN8oS3EJF/+bLoQtaSlVBEctDD152BHdRQo3yS6OX0sCAwEAAaOBnjCBmzAJ
+BgNVHRMEAjAAMB0GA1UdDgQWBBTAiZjF9jgYr2OGXtfK5mdSbdtqODBNBgNVHSME
+RjBEgBSZERGB2EiDY1wbehU2a6Ary1EMt6EWpBQwEjEQMA4GA1UEAwwHaGFja2xh
+YoIUDX6PKRUaHJWHs86BOpEc3seH+9wwEwYDVR0lBAwwCgYIKwYBBQUHAwIwCwYD
+VR0PBAQDAgeAMA0GCSqGSIb3DQEBCwUAA4IBAQCnecb1TwCLFawe6Owda4tj4RV+
+uUap3gfkO0lOaOS7gyAp/l+mEWCiPCsZy7PsDbMbCFgdMogtaijftYMPIdD63uIC
+274C1t7fE6AfXTXLQ37aGGNRjMiK+7oGmh7SFgLgspaFR0ec1KjoaG4A2q/cqoCY
++0+qiBU+F/T/NNXZBYdBXhWscMs56MuEZF9Nz3yDuhVcqb2H3VFIJ9Cy2NxQp0Wt
+TPBsGVmnQ9LpktZC7Rsv/FznfP5vD8jWp8nLqbJnlZOUsb+sbYOTkdi1rxNJ0bA8
+iV7Dmv16MFLTVODL2uJ9VxS8/4tBAqX5KYJtmW58sUEPk2fYMxoUGfvoLKUX
+-----END CERTIFICATE-----
