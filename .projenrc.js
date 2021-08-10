@@ -10,4 +10,9 @@ const project = new NodeProject({
   // projectType: ProjectType.UNKNOWN,  /* Which type of project this is (library/app). */
   // release: undefined,                /* Add release management to this project. */
 });
+
+const common_exclude = ['.env', '.docker-build-ami.conf', 'docker-build-ami.log', 'easy-rsa'];
+project.npmignore.exclude(...common_exclude);
+project.gitignore.exclude(...common_exclude);
+
 project.synth();
