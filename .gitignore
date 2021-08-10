@@ -7,8 +7,6 @@
 *.tgz
 *.tsbuildinfo
 .cache
-.docker-build-ami.conf
-.env
 .eslintcache
 .nyc_output
 .yarn-integrity
@@ -18,8 +16,7 @@
 /test-reports/
 build/Release
 coverage
-docker-build-ami.log
-easy-rsa
+del
 jspm_packages/
 junit.xml
 lerna-debug.log*

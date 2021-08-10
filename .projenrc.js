@@ -11,7 +11,8 @@ const project = new NodeProject({
   // release: undefined,                /* Add release management to this project. */
 });
 
-const common_exclude = ['.env', '.docker-build-ami.conf', 'docker-build-ami.log', 'easy-rsa'];
+// const common_exclude = ['.env', '.docker-build-ami.conf', 'docker-build-ami.log', 'easy-rsa'];
+const common_exclude = ['del'];
 project.npmignore.exclude(...common_exclude);
 project.gitignore.exclude(...common_exclude);
 
