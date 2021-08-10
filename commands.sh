@@ -22,7 +22,10 @@ start() {
   echo "was running" > $LOGFILE
 
   cd /root/cdk-prowler
-  ACCOUNT_ID=$(aws sts get-caller-identity | jq '.Account' -r)
+  # if [ -z "$ACCOUNT_ID" ]
+  # then
+    ACCOUNT_ID=$(aws sts get-caller-identity | jq '.Account' -r)
+  # fi
   if [ -z "$AWS_REGION" ]
   then
     EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`

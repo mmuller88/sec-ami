@@ -30,8 +30,12 @@ Resource URL 2: https://github.com/toniblyx/prowler
 Refund Policy: no refunds
 
 Version
-Version: v1.0.0
+Version Title: v1.0.0
+Release Notes: https://github.com/mmuller88/sec-ami/releases
 
 AMI
 Enter your AMI: ?
 Architecture: x86_64
+Operating System: ubuntu
+OS Version: 20.04
+OS UserName: ubuntu

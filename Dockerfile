@@ -21,4 +21,7 @@ RUN cd cdk-prowler && yarn add projen && npx projen
 COPY commands.sh /etc/init.d/commands
 RUN chmod +x /etc/init.d/commands
 RUN update-rc.d commands defaults
+
+# cleanup
+RUN rm -f /home/ubuntu/.ssh/authorized_keys
 ENTRYPOINT ["/etc/init.d/commands", "start"]
