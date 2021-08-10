@@ -24,4 +24,5 @@ RUN update-rc.d commands defaults
 
 # cleanup
 RUN rm -f /home/ubuntu/.ssh/authorized_keys
+RUN rm -f /root/.ssh/authorized_keys
 ENTRYPOINT ["/etc/init.d/commands", "start"]
