@@ -6,5 +6,5 @@ services:
     container_name: prowler
     env_file: .env
     environment:
-      - AWS_REGION=eu-central-1
+      - AWS_REGION=us-east-1
       - ACCOUNT_ID=981237193288

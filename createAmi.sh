@@ -11,4 +11,4 @@ sleep 3
 cat docker-build-ami.log
 AMI=$(cat docker-build-ami.log| grep "Created image: " | awk '{print $3}')
 echo "AMI: $AMI"
-aws ec2 modify-image-attribute --image-id $AMI --launch-permission "Add=[{UserId=890129220607}, {UserId=681044435084}]"
+aws ec2 modify-image-attribute --image-id $AMI --launch-permission "Add=[{UserId=890129220607}, {UserId=681044435084}]" --region us-east-1
