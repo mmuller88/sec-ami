@@ -1,7 +1,7 @@
 #!/bin/bash
 
-AWS_ACCESS_KEY_ID=$(aws secretsmanager get-secret-value --secret-id build/credentials --query SecretString | jq -r 'fromjson | ."aws_access_key_id"')
-AWS_SECRET_ACCESS_KEY=$(aws secretsmanager get-secret-value --secret-id build/credentials --query SecretString | jq -r 'fromjson | ."aws_secret_access_key"')
+AWS_ACCESS_KEY_ID=$(aws secretsmanager get-secret-value --secret-id build/credentials --region eu-central-1 --query SecretString | jq -r 'fromjson | ."aws_access_key_id"')
+AWS_SECRET_ACCESS_KEY=$(aws secretsmanager get-secret-value --secret-id build/credentials --region eu-central-1 --query SecretString | jq -r 'fromjson | ."aws_secret_access_key"')
 
 AMI_VERSION=v1.0.2
 

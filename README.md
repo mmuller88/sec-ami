@@ -91,5 +91,7 @@ publishing AMI:
 
 https://docs.aws.amazon.com/marketplace/latest/userguide/ami-single-ami-products.html
 
+aws sts get-session-token --serial-number arn:aws:iam::981237193288:mfa/damadden88 --token-code code-from-token
+
 # Thanks To
 * the maintainer of https://github.com/ake-persson/docker-build-ami
