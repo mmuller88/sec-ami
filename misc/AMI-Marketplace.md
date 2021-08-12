@@ -18,9 +18,9 @@ Notice! For running prowler again you need to deploy the Ec2 instance again!
 
 As for transparency I decided to make the code for creating the AMI public available. Go to https://github.com/mmuller88/sec-ami . There you see the Dockerfile which I used for baking the AMI.
 
-SKU: Prowler-Security-Hardening-Scan-v1.0.0
+SKU: Prowler-Security-Hardening-Scan-v1.0.7
 Software by: martinmueller.dev
-Title: Prowler Security Hardening Scan v1.0.0
+Title: Prowler Security Hardening Scan v1.0.7
 Product Logo URL: https://user-images.githubusercontent.com/3985464/113734260-7ba06900-96fb-11eb-82bc-d4f68a1e2710.png
 Search Keywords: Prowler,Security,Hardening,Scan
 Resource Name 1: cdk-prowler Github
@@ -32,10 +32,19 @@ Refund Policy: no refunds
 Version
 Version Title: v1.0.0
 Release Notes: https://github.com/mmuller88/sec-ami/releases
+Usage Instructions: 1) Create an Ec2 role named Ec2Prowler. The role needs AdministratorAccess for allowing to deploy CDK stacks into your account.
+
+2) Start an Ec2 instance with the AMI and the Ec2Prowler role attached.
+
+When you started the Ec2 instance a new Cloudformation stack called ProwlerAudit-stack gets created. You can terminate the ec2 instance after the stack got created.
 
 AMI
-Enter your AMI: ?
+Enter your AMI: ami-07eb9a886f95bc3ba
 Architecture: x86_64
 Operating System: ubuntu
 OS Version: 20.04
 OS UserName: ubuntu
+Security Group 1: tcp, 22, 22, 0.0.0.0/0
+
+Notes
+Contact Information for this request: damadden88@googlemail.com

@@ -1,0 +1,118 @@
+{
+  "Catalog": "AWSMarketplace",
+  "ChangeSet": [
+    { 
+      "ChangeType":"AddDeliveryOptions",
+      "Entity":{
+        "Identifier":"Prowler-Security-Hardening-Scan-##ami_version##",
+        "Type":"AmiProduct@1.0"
+      },
+      "Details": "{\n
+        \"Version\": {\n
+          \"Id\":\"Prowler-Security-Hardening-Scan-##ami_version##\",\n
+          \"VersionTitle\": \"Prowler Security Hardening Scan ##ami_version##\",\n
+          \"ReleaseNotes\": \"https://github.com/mmuller88/sec-ami/releases\"\n
+        },\n
+        \"DeliveryOptions\": [
+          {
+            \"Details\": {
+              \"AmiDeliveryOptionDetails\": {
+                \"AmiSource\": {
+                  \"AmiId\": \"##ami_id##\",
+                  \"AccessRoleArn\": \"arn:aws:iam::981237193288:role/AmiMarketplaceRole\",
+                  \"UserName\": \"ubuntu\",
+                  \"OperatingSystemName\": \"ubuntu\",
+                  \"OperatingSystemVersion\": \"20.04\"
+                },
+                \"UsageInstructions\": \"Easy to use AMI\",
+                \"RecommendedInstanceType\": \"t2.micro\",
+                \"SecurityGroups\": [
+                  {
+                    \"IpProtocol\": \"tcp\",
+                    \"FromPort\": 443,
+                    \"ToPort\": 443,
+                    \"IpRanges\": [
+                      \"0.0.0.0/0\"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        \"Description\": {
+          \"Highlights\": [
+            \"Prowler\",
+            \"Security\",
+            \"Hardening\",
+            \"Scan\"
+          ],
+          \"LongDescription\": \"Prowler Security Stack.
+
+          You can delete the Ec2 instance when the CDK stack creation finished!
+          
+          Based on the security Tool Prowler https://github.com/toniblyx/prowler for best practices assessments, hardening and forensics readiness. I developed an AWS CDK Custom Construct for deploying a Prowler security stack https://github.com/mmuller88/cdk-prowler .
+          
+          But as to learn and deploy AWS CDK takes times I decided to create an AMI which does that for you. Deploying the cdk-prowler stack into your account is as easy as starting an ec2 instance. The following steps are necessary:
+          
+          1) Create an Ec2 role named Ec2Prowler. The role needs AdministratorAccess for allowing to deploy CDK stacks into your account.
+          
+          2) Start an Ec2 instance with the AMI and the Ec2Prowler role attached.
+          
+          When you started the Ec2 instance a new Cloudformation stack called ProwlerAudit-stack gets created. You can terminate the ec2 instance after the stack got created.
+          
+          When the stack creation finishes a Codebuild project runs the Prowler security check. After the run you can access the html results from the prowler S3 bucket named prowleraudit-stack-prowlerauditreportbucket... . Or you can see the results in the CodeBuild report group.
+          
+          Notice! For running prowler again you need to deploy the Ec2 instance again!
+          
+          As for transparency I decided to make the code for creating the AMI public available. Go to https://github.com/mmuller88/sec-ami . There you see the Dockerfile which I used for baking the AMI.\",
+          \"Manufacturer\": \"martinmueller.dev\",
+          \"Sku\": \"Prowler-Security-Hardening-Scan-##ami_version##\",
+          \"SearchKeywords\": [
+            \"Prowler\",
+            \"Security\",
+            \"Hardening\",
+            \"Scan\"
+          ],
+          \"ProductTitle\": \"Prowler Security Hardening Scan ##ami_version##\",
+          \"ShortDescription\": \"Based on the security Tool Prowler https://github.com/toniblyx/prowler for best practices assessments, hardening and forensics readiness\",
+          \"Categories\": [
+            \"Operating Systems\"
+          ]
+        },
+        \"PromotionalResources\": {
+          \"LogoUrl\": \"https://awsmp-logos.s3.amazonaws.com/PLACEHOLDER_Logo_for_Containers_products.png\",
+          \"AdditionalResources\": [],
+          \"Videos\": []
+        },
+        \"SupportInformation\": {
+          \"Description\": \"https://martinmueller.dev\",
+          \"Resources\": [\"https://martinmueller.dev\"]
+        },
+        \"RegionAvailability\": {
+          \"Regions\": [
+            \"ap-south-1\",
+            \"eu-west-3\",
+            \"eu-north-1\",
+            \"eu-west-2\",
+            \"eu-west-1\",
+            \"ap-northeast-2\",
+            \"ap-northeast-1\",
+            \"me-south-1\",
+            \"ca-central-1\",
+            \"sa-east-1\",
+            \"ap-east-1\",
+            \"ap-southeast-1\",
+            \"ap-southeast-2\",
+            \"eu-central-1\",
+            \"us-east-1\",
+            \"us-east-2\",
+            \"us-west-1\",
+            \"us-west-2\"
+          ],
+          \"FutureRegionSupport\": true
+        },
+      }"
+    }
+  ]
+}

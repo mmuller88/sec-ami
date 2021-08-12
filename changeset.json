@@ -1,47 +1,13 @@
 {
   "Catalog": "AWSMarketplace",
-  "ChangeSet": [ 
+  "ChangeSet": [
     { 
       "ChangeType":"AddDeliveryOptions",
       "Entity":{
         "Identifier":"Prowler-Security-Hardening-Scan-##ami_version##",
         "Type":"AmiProduct@1.0"
-       },
-        "Details": "{
-          \"Version\": {
-            \"Id\":\"Prowler-Security-Hardening-Scan-##ami_version##\",
-            \"VersionTitle\": \"Prowler Security Hardening Scan ##ami_version##\",
-            \"ReleaseNotes\": \"https://github.com/mmuller88/sec-ami/releases\"
-          },
-          \"DeliveryOptions\": [
-            {
-              \"Details\": {
-                \"AmiDeliveryOptionDetails\": {
-                  \"AmiSource\": {
-                    \"AmiId\": \"##ami_id##\",
-                    \"AccessRoleArn\": \"arn:aws:iam::981237193288:role/AmiMarketplaceRole\",
-                    \"UserName\": \"ubuntu\",
-                    \"OperatingSystemName\": \"ubuntu\",
-                    \"OperatingSystemVersion\": \"20.04\"
-                  },
-                  \"UsageInstructions\": \"Easy to use AMI\",
-                  \"RecommendedInstanceType\": \"t2.micro\",
-                  \"SecurityGroups\": [
-                    {
-                      \"IpProtocol\": \"tcp\",
-                      \"FromPort\": 443,
-                      \"ToPort\": 443,
-                      \"IpRanges\": [
-                        \"0.0.0.0/0\"
-                      ]
-                    }
-                  ]
-                }
-              }
-            }
-          ]
-        }"
-      }
-    ]
-  }
+      },
+      "Details": "{\"Version\": {\"Id\":\"Prowler-Security-Hardening-Scan-##ami_version##\",\"VersionTitle\": \"Prowler Security Hardening Scan ##ami_version##\",\"ReleaseNotes\":\"https://github.com/mmuller88/sec-ami/releases\"}}"
+    }
+  ]
 }
