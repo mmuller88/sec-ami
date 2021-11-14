@@ -1,0 +1,368 @@
+{
+  "Resources": {
+    "Vpc8378EB38": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "vpn-client-stack-dev/Vpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/Resource"
+      }
+    },
+    "VpcPublicSubnet1Subnet5C2D37C4": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/17",
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        },
+        "AvailabilityZone": "us-east-1a",
+        "MapPublicIpOnLaunch": true,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public"
+          },
+          {
+            "Key": "Name",
+            "Value": "vpn-client-stack-dev/Vpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PublicSubnet1/Subnet"
+      }
+    },
+    "VpcPublicSubnet1RouteTable6C95E38E": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "vpn-client-stack-dev/Vpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PublicSubnet1/RouteTable"
+      }
+    },
+    "VpcPublicSubnet1RouteTableAssociation97140677": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VpcPublicSubnet1RouteTable6C95E38E"
+        },
+        "SubnetId": {
+          "Ref": "VpcPublicSubnet1Subnet5C2D37C4"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PublicSubnet1/RouteTableAssociation"
+      }
+    },
+    "VpcPublicSubnet1DefaultRoute3DA9E72A": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VpcPublicSubnet1RouteTable6C95E38E"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": {
+          "Ref": "VpcIGWD7BA715C"
+        }
+      },
+      "DependsOn": [
+        "VpcVPCGWBF912B6E"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PublicSubnet1/DefaultRoute"
+      }
+    },
+    "VpcPublicSubnet1EIPD7E02669": {
+      "Type": "AWS::EC2::EIP",
+      "Properties": {
+        "Domain": "vpc",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "vpn-client-stack-dev/Vpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PublicSubnet1/EIP"
+      }
+    },
+    "VpcPublicSubnet1NATGateway4D7517AA": {
+      "Type": "AWS::EC2::NatGateway",
+      "Properties": {
+        "SubnetId": {
+          "Ref": "VpcPublicSubnet1Subnet5C2D37C4"
+        },
+        "AllocationId": {
+          "Fn::GetAtt": [
+            "VpcPublicSubnet1EIPD7E02669",
+            "AllocationId"
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "vpn-client-stack-dev/Vpc/PublicSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PublicSubnet1/NATGateway"
+      }
+    },
+    "VpcPrivateSubnet1Subnet536B997A": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "CidrBlock": "10.0.128.0/17",
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        },
+        "AvailabilityZone": "us-east-1a",
+        "MapPublicIpOnLaunch": false,
+        "Tags": [
+          {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private"
+          },
+          {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private"
+          },
+          {
+            "Key": "Name",
+            "Value": "vpn-client-stack-dev/Vpc/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PrivateSubnet1/Subnet"
+      }
+    },
+    "VpcPrivateSubnet1RouteTableB2C5B500": {
+      "Type": "AWS::EC2::RouteTable",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        },
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "vpn-client-stack-dev/Vpc/PrivateSubnet1"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PrivateSubnet1/RouteTable"
+      }
+    },
+    "VpcPrivateSubnet1RouteTableAssociation70C59FA6": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500"
+        },
+        "SubnetId": {
+          "Ref": "VpcPrivateSubnet1Subnet536B997A"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PrivateSubnet1/RouteTableAssociation"
+      }
+    },
+    "VpcPrivateSubnet1DefaultRouteBE02A9ED": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500"
+        },
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": {
+          "Ref": "VpcPublicSubnet1NATGateway4D7517AA"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/PrivateSubnet1/DefaultRoute"
+      }
+    },
+    "VpcIGWD7BA715C": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "vpn-client-stack-dev/Vpc"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/IGW"
+      }
+    },
+    "VpcVPCGWBF912B6E": {
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+      "Properties": {
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        },
+        "InternetGatewayId": {
+          "Ref": "VpcIGWD7BA715C"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/Vpc/VPCGW"
+      }
+    },
+    "sg29196201": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": "vpn-client-stack-dev/sg",
+        "SecurityGroupEgress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1"
+          }
+        ],
+        "SecurityGroupIngress": [
+          {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "from 0.0.0.0/0:ALL TRAFFIC",
+            "IpProtocol": "-1"
+          }
+        ],
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/sg/Resource"
+      }
+    },
+    "clientVpnEndpointLogGroupE9637F73": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {
+        "RetentionInDays": 731
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/clientVpnEndpoint/LogGroup/Resource"
+      }
+    },
+    "clientVpnEndpoint5E60766B": {
+      "Type": "AWS::EC2::ClientVpnEndpoint",
+      "Properties": {
+        "AuthenticationOptions": [
+          {
+            "MutualAuthentication": {
+              "ClientRootCertificateChainArn": "arn:aws:acm:us-east-1:981237193288:certificate/10a8404f-9bc4-444b-bcd6-096d5ae0e71f"
+            },
+            "Type": "certificate-authentication"
+          }
+        ],
+        "ClientCidrBlock": "10.10.0.0/22",
+        "ConnectionLogOptions": {
+          "CloudwatchLogGroup": {
+            "Ref": "clientVpnEndpointLogGroupE9637F73"
+          },
+          "Enabled": true
+        },
+        "ServerCertificateArn": "arn:aws:acm:us-east-1:981237193288:certificate/10a8404f-9bc4-444b-bcd6-096d5ae0e71f",
+        "SecurityGroupIds": [
+          {
+            "Fn::GetAtt": [
+              "sg29196201",
+              "GroupId"
+            ]
+          }
+        ],
+        "SplitTunnel": true,
+        "VpcId": {
+          "Ref": "Vpc8378EB38"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/clientVpnEndpoint/Resource"
+      }
+    },
+    "clientVpnEndpointAssociation0AC1BB6C1": {
+      "Type": "AWS::EC2::ClientVpnTargetNetworkAssociation",
+      "Properties": {
+        "ClientVpnEndpointId": {
+          "Ref": "clientVpnEndpoint5E60766B"
+        },
+        "SubnetId": {
+          "Ref": "VpcPrivateSubnet1Subnet536B997A"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/clientVpnEndpoint/Association0"
+      }
+    },
+    "clientVpnEndpointAuthorizeAll6E8E013C": {
+      "Type": "AWS::EC2::ClientVpnAuthorizationRule",
+      "Properties": {
+        "ClientVpnEndpointId": {
+          "Ref": "clientVpnEndpoint5E60766B"
+        },
+        "TargetNetworkCidr": {
+          "Fn::GetAtt": [
+            "Vpc8378EB38",
+            "CidrBlock"
+          ]
+        },
+        "AuthorizeAllGroups": true
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/clientVpnEndpoint/AuthorizeAll/Resource"
+      }
+    },
+    "CDKMetadata": {
+      "Type": "AWS::CDK::Metadata",
+      "Properties": {
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/32PQW+CQBCFf4v3dRXbQ48lxhiTxhIw3Ndliiu4Q3ZnJJbw3wtYJB7a07z93tvJm0AGL0u5nL2r2s91ViwajQ5kk5DShYjBIzsNYv1lP5kqJrFG68mxpp6Nfiv67w3olWzSSvdWGq1FxMfS6ISPFob4pGJkgoM6ljDxiYXeozaKDNpHuBebXdSPvaKtIqjVTUTOXDs5Ld5ZAtfpMXBv8vsKqbvqdAFLIgHNztBt65CrocMzKE2XSiu7sVmFxg67/4cH5XKgPVCNrni6YEyETCd05nvAMd9v/9ttRYm5l80H5o+Wo27bVljMQJ794hq8yuBNBrOzN2bu2JK5gIzv8weP+juQ4AEAAA=="
+      },
+      "Metadata": {
+        "aws:cdk:path": "vpn-client-stack-dev/CDKMetadata/Default"
+      }
+    }
+  },
+  "Outputs": {
+    "subnet": {
+      "Value": {
+        "Ref": "VpcPublicSubnet1Subnet5C2D37C4"
+      }
+    },
+    "sgOut": {
+      "Value": {
+        "Fn::GetAtt": [
+          "Vpc8378EB38",
+          "DefaultSecurityGroup"
+        ]
+      }
+    }
+  }
+}

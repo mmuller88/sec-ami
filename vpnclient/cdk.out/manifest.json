@@ -1,0 +1,623 @@
+{
+  "version": "14.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "vpn-client-stack-dev": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://981237193288/us-east-1",
+      "properties": {
+        "templateFile": "vpn-client-stack-dev.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/vpn-client-stack-dev/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Vpc8378EB38",
+            "trace": [
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:758:21)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1Subnet5C2D37C4",
+            "trace": [
+              "new Subnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1050:20)",
+              "new PublicSubnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1206:5)",
+              "/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:935:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:917:28)",
+              "Vpc.createSubnets (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:912:12)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:792:10)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTable6C95E38E",
+            "trace": [
+              "new Subnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1068:19)",
+              "new PublicSubnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1206:5)",
+              "/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:935:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:917:28)",
+              "Vpc.createSubnets (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:912:12)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:792:10)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1RouteTableAssociation97140677",
+            "trace": [
+              "new Subnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1074:5)",
+              "new PublicSubnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1206:5)",
+              "/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:935:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:917:28)",
+              "Vpc.createSubnets (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:912:12)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:792:10)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1DefaultRoute3DA9E72A",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1084:19)",
+              "/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:811:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:810:46)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1EIPD7E02669",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1214:21)",
+              "NatGatewayProvider.configureNat (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:116:27)",
+              "Vpc.createNatGateways (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:887:14)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:817:14)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPublicSubnet1NATGateway4D7517AA",
+            "trace": [
+              "PublicSubnet.addNatGateway (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1212:17)",
+              "NatGatewayProvider.configureNat (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:116:27)",
+              "Vpc.createNatGateways (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:887:14)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:817:14)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1Subnet536B997A",
+            "trace": [
+              "new Subnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1050:20)",
+              "new PrivateSubnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1238:5)",
+              "/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:940:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:917:28)",
+              "Vpc.createSubnets (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:912:12)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:792:10)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableB2C5B500",
+            "trace": [
+              "new Subnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1068:19)",
+              "new PrivateSubnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1238:5)",
+              "/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:940:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:917:28)",
+              "Vpc.createSubnets (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:912:12)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:792:10)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1RouteTableAssociation70C59FA6",
+            "trace": [
+              "new Subnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1074:5)",
+              "new PrivateSubnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1238:5)",
+              "/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:940:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:917:28)",
+              "Vpc.createSubnets (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:912:12)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:792:10)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcPrivateSubnet1DefaultRouteBE02A9ED",
+            "trace": [
+              "PrivateSubnet.addRoute (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:1116:19)",
+              "NatGatewayProvider.configureSubnet (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:133:12)",
+              "NatGatewayProvider.configureNat (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/nat.ts:126:12)",
+              "Vpc.createNatGateways (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:887:14)",
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:817:14)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIGWD7BA715C",
+            "trace": [
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:799:19)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcVPCGWBF912B6E",
+            "trace": [
+              "new Vpc (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/vpc.ts:805:19)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:11:17)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/sg/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "sg29196201",
+            "trace": [
+              "new SecurityGroup (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/security-group.ts:289:26)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:12:16)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/clientVpnEndpoint/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clientVpnEndpointLogGroupE9637F73",
+            "trace": [
+              "new LogGroup (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-logs/lib/log-group.ts:237:22)",
+              "new ClientVpnEndpoint (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/client-vpn-endpoint.ts:182:27)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:17:20)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/clientVpnEndpoint/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clientVpnEndpoint5E60766B",
+            "trace": [
+              "new ClientVpnEndpoint (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/client-vpn-endpoint.ts:190:22)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:17:20)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/clientVpnEndpoint/Association0": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clientVpnEndpointAssociation0AC1BB6C1",
+            "trace": [
+              "new ClientVpnEndpoint (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/client-vpn-endpoint.ts:232:42)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:17:20)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/clientVpnEndpoint/AuthorizeAll/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clientVpnEndpointAuthorizeAll6E8E013C",
+            "trace": [
+              "new ClientVpnAuthorizationRule (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/client-vpn-authorization-rule.ts:43:5)",
+              "ClientVpnEndpoint.addAuthorizationRule (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/client-vpn-endpoint.ts:248:12)",
+              "new ClientVpnEndpoint (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/aws-ec2/lib/client-vpn-endpoint.ts:240:12)",
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:17:20)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "subnet",
+            "trace": [
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:28:5)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/sgOut": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "sgOut",
+            "trace": [
+              "new VpnClientStack (/home/martin/git/sec-ami/vpnclient/src/main.ts:32:5)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:50:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ],
+        "/vpn-client-stack-dev/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:22:24)",
+              "/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/core/lib/private/synthesis.ts:166:5",
+              "visit (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/core/lib/private/synthesis.ts:231:5)",
+              "visit (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/core/lib/private/synthesis.ts:227:5)",
+              "injectMetadataResources (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/core/lib/private/synthesis.ts:157:3)",
+              "Object.synthesize (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/home/martin/git/sec-ami/vpnclient/node_modules/@aws-cdk/core/lib/stage.ts:94:23)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/src/main.ts:55:5)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Module.m._compile (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1371:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Object.require.extensions.<computed> [as .ts] (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/index.ts:1374:12)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "main (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:331:12)",
+              "Object.<anonymous> (/home/martin/git/sec-ami/vpnclient/node_modules/ts-node/src/bin.ts:482:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1085:14)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1114:10)",
+              "Module.load (internal/modules/cjs/loader.js:950:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:790:12)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)",
+              "internal/main/run_main_module.js:17:47"
+            ]
+          }
+        ]
+      },
+      "displayName": "vpn-client-stack-dev"
+    }
+  }
+}
