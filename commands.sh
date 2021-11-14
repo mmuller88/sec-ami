@@ -35,7 +35,9 @@ start() {
   echo "ACCOUNT_ID=$ACCOUNT_ID"
   echo "AWS_REGION=$AWS_REGION"
 
-  node_modules/.bin/cdk bootstrap --force --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess aws://$ACCOUNT_ID/$AWS_REGION
+  ls -la
+
+  node_modules/.bin/cdk bootstrap --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess aws://$ACCOUNT_ID/$AWS_REGION
   yarn deploy --require-approval never -c reRunProwler=true
 }
 
