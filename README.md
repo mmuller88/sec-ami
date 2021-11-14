@@ -8,6 +8,7 @@ For orchestrating those containers we are use **Docker Compose**. How to install
 In den jeweiligen course Ordner wechseln und:
 
 ```
+docker-compose build --no-cache
 docker-compose up -d --build
 ```
 ## Destroy
@@ -68,7 +69,7 @@ Notice! Make sure that you configure internet connection with the VPN Client.
 * sudo openvpn downloaded-client-config.ovpn
 
 ## Run AMI script
-* cd into course like: cd eternalred
+* be sure deploying to us-east-1 as that is the region for the marketplace!
 * run:
 ```
 ../createAmi.sh
@@ -76,16 +77,17 @@ Notice! Make sure that you configure internet connection with the VPN Client.
 
 Check the docker-build-ami.log after the script completed successfully.
 
+## Steps in Marketplace:
+That are the steps after you created the AMI.
+
+* https://aws.amazon.com/marketplace/management/manage-products
+* Add AMI and choose AMI. Check to use the right SSH user like **ubuntu**
+
 # Prowler CFN
 
 aws cloudformation deploy --template-file https://raw.githubusercontent.com/toniblyx/prowler/master/util/codebuild/codebuild-prowler-audit-account-cfn.yaml --stack-name sec-stack
 
 # Misc
-ls /usr/local/samba/bin/
-
-ls -l /var/log/samba  
-
-https://www.baeldung.com/linux/run-script-on-startup
 
 publishing AMI:
 

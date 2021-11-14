@@ -1,1 +1,6 @@
-{}
+{
+  "vpn-client-stack-dev": {
+    "subnet": "subnet-00ace302372d76f42",
+    "sgOut": "sg-0ca56c95ed8f93938"
+  }
+}

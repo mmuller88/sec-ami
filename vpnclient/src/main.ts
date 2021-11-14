@@ -1,29 +1,32 @@
 import * as core from '@aws-cdk/core';
 import * as ec2 from '@aws-cdk/aws-ec2';
 
+export interface VpnClientStackProps extends core.StackProps {
+  certArn: string;
+}
 export class VpnClientStack extends core.Stack {
-  constructor(scope: core.Construct, id: string, props: core.StackProps = {}) {
+  constructor(scope: core.Construct, id: string, props: VpnClientStackProps) {
     super(scope, id, props);
-
 
     const vpc = new ec2.Vpc(this, 'Vpc', { maxAzs: 1 });
     const sg = new ec2.SecurityGroup(this, 'sg', {
       vpc,
     });
-    sg;
-    // sg.addIngressRule() all
+    sg.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.allTraffic());
+
     const client = new ec2.ClientVpnEndpoint(this, 'clientVpnEndpoint', {
       vpc,
+      securityGroups: [sg],
       cidr: '10.10.0.0/22',
-      clientCertificateArn: 'arn:aws:acm:eu-central-1:429736546496:certificate/7bbb7fcc-8cda-4633-8d92-ed58e1a47bd6',
-      serverCertificateArn: 'arn:aws:acm:eu-central-1:429736546496:certificate/7bbb7fcc-8cda-4633-8d92-ed58e1a47bd6',
+      clientCertificateArn: props.certArn,
+      serverCertificateArn: props.certArn,
       splitTunnel: true,
       authorizeAllUsersToVpcCidr: true,
     });
     client;
 
     new core.CfnOutput(this, 'subnet', {
-      value: vpc.publicSubnets[0].subnetId,
+      value: vpc.privateSubnets[0].subnetId,
     });
 
     new core.CfnOutput(this, 'sgOut', {
@@ -44,6 +47,9 @@ const buildEnv = {
 
 const app = new core.App();
 
-new VpnClientStack(app, 'vpn-client-stack-dev', { env: buildEnv });
+new VpnClientStack(app, 'vpn-client-stack-dev', {
+  env: buildEnv,
+  certArn: 'arn:aws:acm:us-east-1:981237193288:certificate/10a8404f-9bc4-444b-bcd6-096d5ae0e71f',
+});
 
 app.synth();
